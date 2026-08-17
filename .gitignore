@@ -1,0 +1,19 @@
+node_modules
+node_modules/
+.next/
+out/
+
+# Local environment and deployment files
+.env*
+!.env.example
+.vercel/
+
+# Build and TypeScript artifacts
+*.tsbuildinfo
+
+# Logs and local editor settings
+*.log
+.vscode/
+
+# Test output
+coverage/

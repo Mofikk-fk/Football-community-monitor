@@ -1,0 +1,5 @@
+[
+  {"id":"demo-admin","full_name":"Kemi Adewale","email":"kemi@achieversfc.demo","role":"super_user","is_active":true,"avatar":"K"},
+  {"id":"demo-manager","full_name":"Tobi Adeyemi","email":"tobi@achieversfc.demo","role":"manager","is_active":true},
+  {"id":"demo-coach","full_name":"Coach Michael Obi","email":"michael@achieversfc.demo","role":"coach","is_active":true}
+]

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Football Activity Manager - Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><i class="fa-solid fa-futbol brand-logo" aria-hidden="true"></i><span>Football Activity Manager</span></div>
+      <div id="sidebar-slot"></div>
+    </aside>
+    <div class="nav-overlay hidden" id="nav-overlay"></div>
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+          <span class="hamburger" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <h1>Football Activity Manager</h1>
+      </header>
+      <main class="main">
+        <div class="page-title">
+          <h2>Dashboard</h2>
+          <p>Snapshot of the squad and subscriptions.</p>
+        </div>
+
+        <section class="cards">
+          <div class="card">
+            <h3>Total Members</h3>
+            <div class="card-value" id="total-members">0</div>
+          </div>
+          <div class="card">
+            <h3>Yearly Paid</h3>
+            <div class="card-value" id="yearly-paid">0</div>
+          </div>
+          <div class="card">
+            <h3>Yearly Pending</h3>
+            <div class="card-value" id="yearly-pending">0</div>
+          </div>
+          <div class="card">
+            <h3>Monthly Paid</h3>
+            <div class="card-value" id="monthly-paid">0</div>
+          </div>
+          <div class="card">
+            <h3>Monthly Pending</h3>
+            <div class="card-value" id="monthly-pending">0</div>
+          </div>
+          <div class="card">
+            <h3>Best Attendance</h3>
+            <div class="card-value" id="best-attendance">0%</div>
+          </div>
+        </section>
+
+
+
+        <section class="dashboard-leaderboards">
+          <section class="panel">
+            <div class="page-title-row">
+              <h3>Top Performers</h3>
+              <div class="tab-group">
+                <button class="tab-btn active" data-tab="goals">Goals</button>
+                <button class="tab-btn" data-tab="assists">Assists</button>
+                <button class="tab-btn" data-tab="ga">G+A</button>
+                <button class="tab-btn" data-tab="yellow">Yellow</button>
+                <button class="tab-btn" data-tab="red">Red</button>
+              </div>
+            </div>
+            <div class="empty-state hidden" id="performers-empty">No stats yet.</div>
+            <ul class="leaderboard" id="performers-list"></ul>
+            <div class="activity-actions">
+              <a class="ghost-btn" href="stats.html">Show more</a>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h3>Attendance Consistency</h3>
+            <div class="empty-state hidden" id="attendance-consistency-empty">No attendance recorded yet.</div>
+            <ul class="leaderboard" id="attendance-consistency-list"></ul>
+            <div class="activity-actions">
+              <a class="ghost-btn" href="attendance-summary.html">Show more</a>
+            </div>
+          </section>
+        </section>
+
+        <section class="dashboard-analytics">
+          <section class="panel analytics-card">
+            <div class="analytics-header">
+              <div>
+                <h3>Performance Index</h3>
+                <p class="analytics-subtitle">Football performance score</p>
+              </div>
+              <span class="analytics-score" id="performance-index-score">0 / 100</span>
+            </div>
+            <div class="empty-state hidden" id="performance-index-empty">No player performance data yet.</div>
+            <div class="analytics-widget" id="performance-index-widget"></div>
+          </section>
+
+          <section class="panel analytics-card">
+            <div class="analytics-header">
+              <div>
+                <h3>Club Contribution Index</h3>
+                <p class="analytics-subtitle">Attendance and payments</p>
+              </div>
+              <span class="analytics-score" id="contribution-index-score">0 / 100</span>
+            </div>
+            <div class="empty-state hidden" id="contribution-index-empty">No club contribution data yet.</div>
+            <div class="analytics-widget" id="contribution-index-widget"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="/js/sidebar-loader.js"></script>
+  <script src="/js/mock-api.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/player-indexes.js"></script>
+  <script src="/js/pages/dashboard.js"></script>
+</body>
+
+</html>
