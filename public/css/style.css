@@ -2373,6 +2373,15 @@ body.theme-dark .user-chevron {
     padding: 16px;
   }
 
+  .dashboard-summary-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .dashboard-summary-cards .card {
+    min-width: 0;
+  }
+
   .card h3,
   .section-title {
     font-size: 12px;
